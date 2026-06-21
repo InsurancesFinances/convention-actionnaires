@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convention entre actionnaires : l'assurance vie, un outil précieux lors d'un décès – Industrielle Alliance</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ia-navy:    #00205B;
+    --ia-blue:    #003087;
+    --ia-mid:     #1B5BB5;
+    --ia-light:   #EEF4FB;
+    --ia-accent:  #E8502E;
+    --ia-gold:    #F5A623;
+    --ia-success: #1E8C55;
+    --text-dark:  #0D1B2A;
+    --text-mid:   #3D5166;
+    --text-muted: #697A8D;
+    --border:     #D5E2F0;
+    --bg-page:    #F7FAFD;
+    --white:      #FFFFFF;
+    --shadow-sm:  0 1px 4px rgba(0,32,91,0.08);
+    --shadow-md:  0 4px 20px rgba(0,32,91,0.10);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-dark);
+    background: var(--bg-page);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    background: var(--ia-navy);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 8vw;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 80% 50%, rgba(27,91,181,0.25) 0%, transparent 70%),
+      linear-gradient(135deg, transparent 60%, rgba(0,48,135,0.6) 100%);
+    pointer-events: none;
+  }
+  .cover-pattern {
+    position: absolute;
+    right: -40px;
+    top: 0;
+    width: 45%;
+    height: 100%;
+    opacity: 0.04;
+    background-image: repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%);
+    background-size: 30px 30px;
+  }
+  .cover-logo {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .cover-logo::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: #FFFFFF;
+    border-radius: 4px;
+  }
+  .cover-eyebrow {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ia-gold);
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .cover h1 {
+    font-size: clamp(36px, 5.4vw, 64px);
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.1;
+    max-width: 760px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+  .cover h1 span { color: var(--ia-gold); }
+  .cover-sub {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.72);
+    max-width: 560px;
+    line-height: 1.6;
+    position: relative;
+  }
+  .cover-accent-bar {
+    width: 56px;
+    height: 4px;
+    background: #FFFFFF;
+    margin-bottom: 24px;
+    border-radius: 2px;
+    position: relative;
+  }
+  .cover-contact {
+    position: absolute;
+    bottom: 52px;
+    left: 8vw;
+    right: 8vw;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    padding-top: 24px;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+  .cover-contact-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-right: 20px;
+    letter-spacing: 0.02em;
+  }
+  .cover-contact-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    margin-right: 28px;
+    letter-spacing: 0.04em;
+  }
+  .cover-contact-item {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .cover-contact-dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+    margin-right: 24px;
+  }
+
+  /* ── LAYOUT ── */
+  .page-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 64px 40px;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-header { margin-bottom: 48px; }
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ia-mid);
+    margin-bottom: 12px;
+  }
+  .section-header h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--ia-navy);
+    line-height: 1.15;
+  }
+  .section-header p {
+    font-size: 17px;
+    color: var(--text-mid);
+    margin-top: 16px;
+    max-width: 680px;
+  }
+  .divider { border: none; border-top: 1.5px solid var(--border); margin: 64px 0; }
+
+  /* ── TABLE OF CONTENTS ── */
+  .toc {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 64px;
+    box-shadow: var(--shadow-sm);
+  }
+  .toc h3 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 15px;
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-num { font-size: 11px; font-weight: 600; color: var(--ia-accent); min-width: 24px; }
+  .toc-item span:last-child { font-weight: 500; }
+
+  /* ── GOAL / ISSUE CARDS ── */
+  .goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .goal-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+  }
+  .goal-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+  .goal-icon.blue { background: var(--ia-light); }
+  .goal-icon.orange { background: #FEF0EB; }
+  .goal-icon.green { background: #E8F7EE; }
+  .goal-icon.gray { background: #F1F3F6; }
+  .goal-icon.gold { background: #FEF5E7; }
+  .goal-card h4 { font-size: 15px; font-weight: 600; color: var(--ia-navy); margin-bottom: 10px; }
+  .goal-card p { font-size: 14px; color: var(--text-mid); line-height: 1.6; }
+
+  /* ── ENJEU CARD (full width, structured) ── */
+  .enjeu-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow-sm);
+  }
+  .enjeu-head {
+    background: var(--ia-navy);
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .enjeu-num {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--ia-gold);
+    color: var(--ia-navy);
+    font-weight: 700;
+    font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .enjeu-head h4 { color: #fff; font-size: 17px; font-weight: 700; }
+  .enjeu-body { padding: 26px 28px; }
+  .enjeu-block { margin-bottom: 18px; }
+  .enjeu-block:last-child { margin-bottom: 0; }
+  .enjeu-block-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ia-mid);
+    margin-bottom: 6px;
+  }
+  .enjeu-block p { font-size: 14.5px; color: var(--text-mid); line-height: 1.65; }
+  .enjeu-block.result { background: #FEF0EB; border-radius: 8px; padding: 14px 16px; }
+  .enjeu-block.result .enjeu-block-label { color: #C53D1F; }
+  .enjeu-expand {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--border);
+  }
+  .enjeu-expand p { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+  /* ── INFO ROWS ── */
+  .info-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 24px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    align-items: flex-start;
+  }
+  .info-row-icon {
+    font-size: 24px;
+    min-width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--ia-light);
+    border-radius: 10px;
+  }
+  .info-row-content h4 { font-size: 15px; font-weight: 600; color: var(--ia-navy); margin-bottom: 8px; }
+  .info-row-content p { font-size: 14px; color: var(--text-mid); line-height: 1.65; }
+
+  /* ── CALLOUT BOX ── */
+  .callout {
+    border-left: 4px solid var(--ia-mid);
+    background: var(--ia-light);
+    border-radius: 0 12px 12px 0;
+    padding: 24px 28px;
+    margin: 32px 0;
+  }
+  .callout.orange { border-left-color: var(--ia-accent); background: #FEF0EB; }
+  .callout.green { border-left-color: var(--ia-success); background: #E8F7EE; }
+  .callout.gold { border-left-color: var(--ia-gold); background: #FEF5E7; }
+  .callout p { font-size: 15px; color: var(--text-dark); line-height: 1.65; }
+  .callout strong { color: var(--ia-navy); }
+
+  /* ── STAT HIGHLIGHT ── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+  }
+  .stat-card { background: var(--ia-navy); border-radius: 12px; padding: 28px 24px; text-align: center; color: #fff; }
+  .stat-card.light { background: var(--white); border: 1px solid var(--border); color: var(--text-dark); }
+  .stat-num { font-size: 34px; font-weight: 700; color: var(--ia-gold); line-height: 1; margin-bottom: 8px; }
+  .stat-card.light .stat-num { color: var(--ia-mid); }
+  .stat-label { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.75); }
+  .stat-card.light .stat-label { color: var(--text-muted); }
+
+  /* ── MECHANISM FLOW DIAGRAM ── */
+  .flow-wrap {
+    margin: 36px 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 36px 30px;
+    box-shadow: var(--shadow-sm);
+  }
+  .flow-row {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .flow-step {
+    flex: 1;
+    min-width: 150px;
+    background: var(--ia-light);
+    border-radius: 10px;
+    padding: 18px 16px;
+    text-align: center;
+    position: relative;
+  }
+  .flow-step-num {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: var(--ia-navy);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 10px;
+  }
+  .flow-step h5 { font-size: 13.5px; font-weight: 700; color: var(--ia-navy); margin-bottom: 6px; line-height: 1.3; }
+  .flow-step p { font-size: 12.5px; color: var(--text-mid); line-height: 1.5; }
+  .flow-arrow {
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ia-gold);
+    font-size: 22px;
+    font-weight: 700;
+    flex-shrink: 0;
+    width: 24px;
+  }
+  @media (max-width: 700px) {
+    .flow-row { flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); width: 100%; height: 24px; }
+  }
+
+  /* ── FINANCE TABLE ── */
+  .fin-table-wrap {
+    margin: 32px 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .fin-table { width: 100%; border-collapse: collapse; }
+  .fin-table thead th {
+    background: var(--ia-navy);
+    color: #fff;
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 14px 16px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  .fin-table td {
+    padding: 12px 16px;
+    font-size: 13.5px;
+    color: var(--text-mid);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .fin-table tbody tr:nth-child(even) { background: #FAFBFD; }
+  .fin-table tbody tr:last-child { background: var(--ia-light); font-weight: 700; }
+  .fin-table tbody tr:last-child td { color: var(--ia-navy); border-bottom: none; }
+  .fin-table .name-cell { font-weight: 600; color: var(--ia-navy); }
+
+  /* ── 3-METHOD COMPARISON CARDS ── */
+  .accounts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .account-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+  }
+  .account-card.featured { border: 2px solid var(--ia-gold); position: relative; }
+  .account-card.featured::before {
+    content: 'RECOMMANDÉ';
+    position: absolute;
+    top: -11px; left: 20px;
+    background: var(--ia-gold);
+    color: var(--ia-navy);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+  .account-card .acct-tag {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 20px; display: inline-block; margin-bottom: 14px;
+  }
+  .account-card h4 { font-size: 16px; font-weight: 700; color: var(--ia-navy); margin-bottom: 10px; }
+  .account-card p { font-size: 13px; color: var(--text-mid); line-height: 1.6; margin-bottom: 10px; }
+  .account-highlight {
+    font-size: 12px; font-weight: 600; color: var(--ia-mid);
+    background: var(--ia-light); padding: 6px 10px; border-radius: 6px; margin-top: 4px;
+  }
+  .account-card.featured .account-highlight { background: #FEF5E7; color: #B07D00; }
+
+  /* ── PRINCIPLE BOX ── */
+  .principle-box { background: var(--ia-navy); color: white; border-radius: 12px; padding: 28px 32px; margin: 32px 0; }
+  .principle-box p { font-size: 17px; font-weight: 500; line-height: 1.6; color: rgba(255,255,255,0.95); }
+  .principle-box p strong { color: var(--ia-gold); }
+
+  /* ── DEFINITION BOX ── */
+  .def-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--ia-gold);
+    border-radius: 0 12px 12px 0;
+    padding: 22px 26px;
+    margin: 24px 0;
+  }
+  .def-box .def-term { font-size: 13px; font-weight: 700; color: var(--ia-navy); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+  .def-box p { font-size: 14.5px; color: var(--text-mid); line-height: 1.65; }
+
+  /* ── CASE STUDY ── */
+  .case-banner {
+    background: linear-gradient(120deg, var(--ia-navy) 0%, var(--ia-blue) 100%);
+    border-radius: 16px;
+    padding: 32px 36px;
+    color: white;
+    margin: 32px 0;
+  }
+  .case-banner .case-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 5px 12px; border-radius: 20px; margin-bottom: 16px;
+  }
+  .case-banner h3 { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+  .case-banner p { font-size: 14.5px; color: rgba(255,255,255,0.8); line-height: 1.65; }
+
+  .timeline {
+    margin: 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .timeline-item {
+    display: flex;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-age {
+    min-width: 70px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ia-mid);
+  }
+  .timeline-content h5 { font-size: 14.5px; font-weight: 700; color: var(--ia-navy); margin-bottom: 4px; }
+  .timeline-content p { font-size: 13.5px; color: var(--text-mid); line-height: 1.6; }
+
+  /* ── DIAGNOSTIC CHECKLIST ── */
+  .check-list { display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm);
+  }
+  .check-box {
+    width: 22px; height: 22px;
+    border-radius: 5px;
+    border: 2px solid var(--ia-mid);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .check-item p { font-size: 14.5px; color: var(--text-dark); line-height: 1.5; }
+  .check-item span { color: var(--text-muted); font-size: 13px; }
+
+  /* ── CTA / ABOUT ── */
+  .about-section {
+    background: var(--ia-navy);
+    border-radius: 20px;
+    padding: 60px 48px;
+    color: white;
+    margin-top: 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-section::after {
+    content: 'iA';
+    position: absolute;
+    right: 40px; top: 40px;
+    font-size: 120px; font-weight: 700;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+  }
+  .about-section h2 { font-size: 30px; font-weight: 700; margin-bottom: 16px; line-height: 1.2; color: white; position: relative; }
+  .about-section .tagline { font-style: italic; font-size: 17px; color: var(--ia-gold); margin-bottom: 24px; position: relative; }
+  .about-section > p.lead { font-size: 16px; color: rgba(255,255,255,0.75); max-width: 600px; margin-bottom: 40px; line-height: 1.7; position: relative; }
+  .value-props { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px; position: relative; }
+  .value-prop { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 24px; }
+  .value-prop .vp-icon { font-size: 24px; margin-bottom: 12px; }
+  .value-prop h4 { font-size: 14px; font-weight: 600; color: white; margin-bottom: 8px; }
+  .value-prop p { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.55; }
+  .cta-btn {
+    display: inline-block; background: var(--ia-accent); color: white; font-weight: 600; font-size: 15px;
+    padding: 16px 36px; border-radius: 8px; text-decoration: none; position: relative;
+  }
+  .credentials-row {
+    display: flex; align-items: center; gap: 20px; margin-top: 28px; position: relative;
+    flex-wrap: wrap;
+  }
+  .credential-badge {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+    padding: 8px 14px; border-radius: 8px; font-size: 12.5px; color: rgba(255,255,255,0.8);
+  }
+
+  /* ── FOOTER ── */
+  .guide-footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 40px;
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-brand { font-size: 13px; font-weight: 700; color: var(--ia-navy); letter-spacing: 0.06em; }
+  .footer-disc { font-size: 11px; color: var(--text-muted); max-width: 560px; line-height: 1.6; }
+
+  @media (max-width: 640px) {
+    .page-wrap { padding: 40px 20px; }
+    .cover { padding: 60px 24px; }
+    .about-section { padding: 40px 28px; }
+    .guide-footer { flex-direction: column; }
+    .fin-table-wrap { overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ COVER ══════════════ -->
+<div class="cover">
+  <div class="cover-pattern"></div>
+  <div class="cover-logo">Industrielle Alliance – Solutions Cas Avancés iA</div>
+  <div class="cover-eyebrow">Guide destiné aux propriétaires d'entreprise</div>
+  <div class="cover-accent-bar"></div>
+  <h1>Convention entre actionnaires : <span>l'assurance vie</span>, un outil précieux lors d'un décès</h1>
+  <p class="cover-sub">Pourquoi une convention bien rédigée ne suffit pas, et comment structurer son financement pour protéger l'entreprise, les associés et leurs familles.</p>
+  <div class="cover-contact">
+    <span class="cover-contact-name">David Champmartin</span>
+    <span class="cover-contact-title">Conseiller en sécurité financière · Industrielle Alliance</span>
+    <span class="cover-contact-dot"></span>
+    <span class="cover-contact-item">📞 +1 (514) 618-7309</span>
+    <span class="cover-contact-dot"></span>
+    <span class="cover-contact-item">✉ david.champmartin@agc.ia.ca</span>
+  </div>
+</div>
+
+<!-- ══════════════ INTRO + TOC ══════════════ -->
+<div class="page-wrap">
+
+  <div class="toc">
+    <h3>Table des matières</h3>
+    <a href="#convention" class="toc-item"><span class="toc-num">01</span><span>Qu'est-ce qu'une convention entre actionnaires ?</span></a>
+    <a href="#executer" class="toc-item"><span class="toc-num">02</span><span>Une convention solide, mais comment l'exécuter ?</span></a>
+    <a href="#enjeux" class="toc-item"><span class="toc-num">03</span><span>Les 5 enjeux de l'exécution d'une convention d'actionnaires</span></a>
+    <a href="#solution" class="toc-item"><span class="toc-num">04</span><span>La solution : le rachat financé par l'assurance vie</span></a>
+    <a href="#mecanisme" class="toc-item"><span class="toc-num">05</span><span>Le mécanisme en détail</span></a>
+    <a href="#simulation" class="toc-item"><span class="toc-num">06</span><span>Simulation de rachat financé par assurance</span></a>
+    <a href="#retraite" class="toc-item"><span class="toc-num">07</span><span>Et si aucun actionnaire ne décède ? La stratégie d'assurance retraite</span></a>
+    <a href="#cas" class="toc-item"><span class="toc-num">08</span><span>Cas d'étude : Daniel, 45 ans</span></a>
+    <a href="#diagnostic" class="toc-item"><span class="toc-num">09</span><span>Diagnostic rapide : votre convention est-elle finançable ?</span></a>
+    <a href="#aide" class="toc-item"><span class="toc-num">10</span><span>Pourquoi travailler avec David Champmartin</span></a>
+  </div>
+
+  <div class="callout">
+    <p>Vous êtes actionnaire d'une entreprise avec un ou plusieurs partenaires. Votre avocat a probablement déjà rédigé, ou vous a fortement conseillé de rédiger, une convention entre actionnaires. Mais une question essentielle reste trop souvent sans réponse : si l'un de vous décède demain, <strong>où l'entreprise trouvera-t-elle l'argent</strong> pour respecter les obligations prévues dans ce document ? Ce guide répond à cette question.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══════════════ SECTION 1 : QU'EST-CE QU'UNE CONVENTION ══════════════ -->
+  <section id="convention">
+    <div class="section-header">
+      <div class="section-eyebrow">Section 01</div>
+      <h2>Qu'est-ce qu'une convention entre actionnaires ?</h2>
+      <p>Avant de parler de financement, il est utile de rappeler ce que ce document fait, et surtout ce qu'il ne fait pas tout seul.</p>
+    </div>
+
+    <p style="color:var(--text-mid); margin-bottom:24px; font-size:15px;">Une convention entre actionnaires est un contrat privé qui régit les relations entre les détenteurs d'une entreprise. Elle vient compléter les statuts constitutifs et la loi sur les sociétés, qui sont souvent trop génériques pour couvrir les situations propres à une PME détenue par deux, trois ou quatre partenaires.</p>
+
+    <div class="goals-grid">
+      <div class="goal-card">
+        <div class="goal-icon blue">⚖️</div>
+        <h4>Clause achat-vente forcée</h4>
+        <p>Oblige les actionnaires survivants à racheter les parts d'un associé décédé, invalide ou qui quitte l'entreprise, et oblige la succession à les vendre. Sans cette réciprocité, l'un des deux camps peut se retrouver coincé.</p>
+      </div>
+      <div class="goal-card">
+        <div class="goal-icon orange">🔍</div>
+        <h4>Méthode d'évaluation</h4>
+        <p>Détermine comment la valeur des parts sera calculée : multiple de bénéfices, juste valeur marchande, formule fixe révisée annuellement, ou évaluation par un expert indépendant.</p>
+      </div>
+      <div class="goal-card">
+        <div class="goal-icon green">🚫</div>
+        <h4>Droit de premier refus</h4>
+        <p>Empêche un actionnaire de vendre ses parts à un tiers étranger sans d'abord les offrir aux autres associés, protégeant ainsi le contrôle et la culture de l'entreprise.</p>
+      </div>
+      <div class="goal-card">
+        <div class="goal-icon gray">📝</div>
+        <h4>Gouvernance et mésentente</h4>
+        <p>Prévoit les mécanismes de résolution de conflits, les droits de vote, et les clauses de non-concurrence applicables si un actionnaire quitte l'entreprise.</p>
+      </div>
+    </div>
+
+    <div class="callout gold" style="margin-top:32px;">
+      <p>Le point commun de toutes ces clauses : elles prévoient <strong>quoi faire</strong>, mais rarement <strong>avec quel argent</strong>. C'est précisément l'angle mort que ce guide aborde.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══════════════ SECTION 2 : SOLIDE MAIS COMMENT L'EXECUTER ══════════════ -->
+  <section id="executer">
+    <div class="section-header">
+      <div class="section-eyebrow">Section 02</div>
+      <h2>Une convention solide, mais comment l'exécuter ?</h2>
+      <p>Le document juridique et la capacité financière de l'exécuter sont deux choses distinctes, et la confusion entre les deux est l'erreur la plus coûteuse que commettent les actionnaires d'entreprises privées.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:32px 0;">
+      <div class="info-row" style="margin-bottom:0;">
+        <div class="info-row-icon">🛡️</div>
+        <div class="info-row-content">
+          <h4>La protection légale</h4>
+          <p>Votre avocat a parfaitement rédigé une convention d'actionnaires solide. Elle prévoit quoi faire en cas de décès d'un des actionnaires, d'invalidité ou de conflit. C'est le « code de la route » de votre partenariat.</p>
+        </div>
+      </div>
+      <div class="info-row" style="margin-bottom:0;">
+        <div class="info-row-icon">💰</div>
+        <div class="info-row-content">
+          <h4>La réalité financière</h4>
+          <p>Cependant, une clause de rachat sans l'argent pour la payer est inutile. C'est comme avoir un contrat d'achat de maison... sans hypothèque ni compte en banque.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="principle-box">
+      <p>Une convention d'actionnaires n'est aussi solide que <strong>son moteur financier</strong>. Le meilleur contrat du monde ne crée pas de liquidités à partir de rien le jour où elles sont requises.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <div style="margin: -32px 0 48px; border-radius: 16px; overflow: hidden; height: 340px; position: relative;">
+    <img src="https://images.unsplash.com/photo-1758518730384-be3d205838e8?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Poignée de main entre deux professionnels" style="width:100%; height:100%; object-fit:cover; object-position:center 35%;">
+    <div style="position:absolute; inset:0; background:linear-gradient(to right, rgba(0,32,91,0.55) 0%, transparent 60%);"></div>
+    <div style="position:absolute; bottom:32px; left:36px;">
+      <p style="color:rgba(255,255,255,0.7); font-size:12px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">Section 03</p>
+      <p style="color:#FFFFFF; font-size:22px; font-weight:700; line-height:1.2;">Les 5 enjeux de l'exécution<br>d'une convention d'actionnaires</p>
+    </div>
+  </div>
+
+  <!-- ══════════════ SECTION 3 : LES 5 ENJEUX ══════════════ -->
+  <section id="enjeux">
+    <div class="section-header">
+      <div class="section-eyebrow">Section 03</div>
+      <h2>Les 5 enjeux de l'exécution d'une convention d'actionnaires</h2>
+      <p>Voici ce qui se passe concrètement, dans l'ordre, lorsqu'une convention prévoit un rachat obligatoire sans financement structuré en amont.</p>
+    </div>
+
+    <div class="enjeu-card">
+      <div class="enjeu-head"><div class="enjeu-num">1</div><h4>Le manque de liquidités</h4></div>
+      <div class="enjeu-body">
+        <div class="enjeu-block">
+          <div class="enjeu-block-label">Scénario</div>
+          <p>Un associé décède. La convention oblige le survivant à racheter ses parts pour 1 M$ sous 90 jours.</p>
+        </div>
+        <div class="enjeu-block">
+          <div class="enjeu-block-label">Enjeu</div>
+          <p>L'entreprise n'a pas 1 M$ de liquidité. L'argent est investi dans les équipements, les stocks, et doit être utilisé pour les comptes payables.</p>
+        </div>
+        <div class="enjeu-block result">
+          <div class="enjeu-block-label">Résultat</div>
+          <p>Vente d'actifs vitaux ou faillite technique pour respecter l'obligation légale.</p>
+        </div>
+        <div class="enjeu-expand">
+          <p>Dans la grande majorité des PME, les liquidités disponibles représentent une fraction infime de la valeur des parts à racheter. La trésorerie sert à financer le fonds de roulement, pas à dormir en attendant un événement imprévisible. Sans une source de capital externe et immédiate, le délai de 90 jours prévu dans la convention devient un compte à rebours impossible à respecter.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="enjeu-card">
+      <div class="enjeu-head"><div class="enjeu-num">2</div><h4>L'imposition</h4></div>
+      <div class="enjeu-body">
+        <div class="enjeu-block">
+          <div class="enjeu-block-label">L'erreur classique</div>
+          <p>Payer la succession à même les profits de l'entreprise.</p>
+        </div>
+        <div class="enjeu-block result">
+          <div class="enjeu-block-label">Conséquence chiffrée</div>
+          <p>Pour sortir 1 000 000 $ net pour racheter les parts, l'entreprise doit souvent générer près de <strong>1 400 000 $</strong> de profits avant impôts corporatifs.</p>
+        </div>
+        <div class="enjeu-expand">
+          <p>Le rachat devient un fardeau fiscal qui paralyse la croissance pour de nombreuses années. Cette différence de 400 000 $ n'est pas un coût marginal : c'est l'équivalent de plusieurs années de réinvestissement, d'embauches ou de remboursement de dette que l'entreprise sacrifie simplement parce que la transaction n'a pas été structurée pour profiter d'un véhicule fiscalement avantageux, comme nous le verrons à la section 5.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="enjeu-card">
+      <div class="enjeu-head"><div class="enjeu-num">3</div><h4>L'invalidité d'un actionnaire</h4></div>
+      <div class="enjeu-body">
+        <div class="enjeu-block">
+          <div class="enjeu-block-label">Un risque plus élevé que le décès</div>
+          <p>À 45 ans, la probabilité d'une invalidité de longue durée est <strong>3 fois supérieure</strong> à celle du décès.</p>
+        </div>
+        <div class="enjeu-block">
+          <div class="enjeu-block-label">Question à se poser</div>
+          <p>Si votre associé ne peut plus travailler pendant 2 ans, continuerez-vous à lui verser son salaire ? Ses dividendes ? Devrez-vous payer un remplaçant ET votre associé inactif ?</p>
+        </div>
+        <div class="enjeu-block result">
+          <div class="enjeu-block-label">Constat</div>
+          <p>La plupart des conventions sont muettes sur la résolution de ce risque, pourtant statistiquement plus probable que le décès.</p>
+        </div>
+        <div class="enjeu-expand">
+          <p>Ce guide porte principalement sur le financement par assurance vie, mais une stratégie de protection complète pour des actionnaires d'entreprise inclut généralement une réflexion parallèle sur l'assurance invalidité et l'assurance pour maladies graves, structurées de façon à financer un rachat de parts en cas d'invalidité permanente, et non seulement le remplacement de revenu personnel.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="enjeu-card">
+      <div class="enjeu-head"><div class="enjeu-num">4</div><h4>Endetter l'entreprise</h4></div>
+      <div class="enjeu-body">
+        <div class="enjeu-block">
+          <div class="enjeu-block-label">Refus bancaire</div>
+          <p>La banque vient de perdre un « homme clé » (le défunt). Elle considère l'entreprise PLUS risquée, pas moins. Le crédit se resserre exactement au moment où l'entreprise en a le plus besoin.</p>
+        </div>
+        <div class="enjeu-block">
+          <div class="enjeu-block-label">Cashflow étranglé</div>
+          <p>Ajouter une dette massive pour racheter des parts n'ajoute aucun actif productif. Cela draine simplement le fonds de roulement pour les années à venir.</p>
+        </div>
+        <div class="enjeu-block result">
+          <div class="enjeu-block-label">Coût réel</div>
+          <p>Financer un rachat à 7 % ou 8 % d'intérêt sur 10 ans augmente le coût réel de l'acquisition de manière significative, sur la tête d'une entreprise déjà affaiblie par la perte d'un dirigeant.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="enjeu-card">
+      <div class="enjeu-head"><div class="enjeu-num">5</div><h4>Le désaccord sur la valeur</h4></div>
+      <div class="enjeu-body">
+        <div class="enjeu-block">
+          <div class="enjeu-block-label">Deux intérêts opposés</div>
+          <p>Sans capacité financière, le ou les associés survivants veulent payer le moins cher possible à la famille du défunt pour sauver l'entreprise. La veuve ou la succession veut au contraire le prix le plus élevé possible pour sa sécurité financière.</p>
+        </div>
+        <div class="enjeu-block result">
+          <div class="enjeu-block-label">Conséquence</div>
+          <p>Les conventions vagues finissent en litiges coûteux, parfois pendant plusieurs années, pendant que l'entreprise elle-même perd de la valeur dans l'incertitude.</p>
+        </div>
+        <div class="enjeu-expand">
+          <p>Le financement clair fixe le prix et la méthode à l'avance. Lorsque le montant d'assurance correspond directement à la valeur des parts couvertes, la discussion sur « combien » devient accessoire : l'argent est déjà là, au montant déjà convenu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══════════════ SECTION 4 : LA SOLUTION ══════════════ -->
+  <section id="solution">
+    <div class="section-header">
+      <div class="section-eyebrow">Section 04</div>
+      <h2>La solution : le rachat financé par l'assurance vie</h2>
+      <p>Il existe en réalité trois façons de financer l'obligation de rachat prévue dans une convention d'actionnaires. Une seule élimine simultanément les 5 enjeux présentés plus haut.</p>
+    </div>
+
+    <div class="accounts-grid">
+      <div class="account-card">
+        <span class="acct-tag" style="background:var(--ia-light); color:var(--ia-mid);">Méthode 1</span>
+        <h4>Épargne corporative</h4>
+        <p>L'entreprise accumule progressivement un fonds de prévoyance dans un compte de réserve, pour être prête le jour où un rachat sera nécessaire.</p>
+        <div class="account-highlight">Limite : prend des années à constituer, immobilise du capital improductif, et ne garantit aucunement que le montant requis sera disponible au bon moment.</div>
+      </div>
+
+      <div class="account-card">
+        <span class="acct-tag" style="background:#FEF0EB; color:#C53D1F;">Méthode 2</span>
+        <h4>Emprunt bancaire</h4>
+        <p>Au moment du décès, l'entreprise tente d'emprunter le capital requis auprès d'une institution financière.</p>
+        <div class="account-highlight">Limite : comme vu à l'enjeu 4, la perte d'un actionnaire clé rend l'octroi de crédit plus difficile, pas plus facile, exactement quand l'argent est requis.</div>
+      </div>
+
+      <div class="account-card featured">
+        <span class="acct-tag" style="background:#FEF5E7; color:#B07D00;">Méthode 3</span>
+        <h4>Assurance vie</h4>
+        <p>Chaque actionnaire est assuré pour un montant correspondant à la valeur de ses parts. Au décès, le capital est versé immédiatement, libre d'impôt, peu importe quand l'événement survient.</p>
+        <div class="account-highlight">Avantage : capital disponible instantanément, montant connu à l'avance, traitement fiscal optimal via le compte de dividende en capital (voir section 5).</div>
+      </div>
+    </div>
+
+    <div class="callout green" style="margin-top:32px;">
+      <p><strong>Pourquoi l'assurance gagne sur les trois critères qui comptent :</strong> rapidité (capital versé en quelques semaines plutôt qu'en mois ou années), certitude (montant garanti, indépendant des liquidités réelles de l'entreprise au moment du décès) et efficacité fiscale (versement libre d'impôt à la société grâce au compte de dividende en capital).</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══════════════ SECTION 5 : MECANISME ══════════════ -->
+  <div style="margin: 0 0 48px; border-radius: 16px; overflow: hidden; height: 340px; position: relative;">
+    <img src="https://images.unsplash.com/photo-1752159684779-0639174cdfac?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Associés d'affaires concluant une entente" style="width:100%; height:100%; object-fit:cover; object-position:center 40%;">
+    <div style="position:absolute; inset:0; background:linear-gradient(to right, rgba(0,32,91,0.55) 0%, transparent 60%);"></div>
+    <div style="position:absolute; bottom:32px; left:36px;">
+      <p style="color:rgba(255,255,255,0.7); font-size:12px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">Section 05</p>
+      <p style="color:#FFFFFF; font-size:22px; font-weight:700; line-height:1.2;">Le mécanisme en détail</p>
+    </div>
+  </div>
+
+  <section id="mecanisme">
+    <div class="section-header">
+      <div class="section-eyebrow">Section 05</div>
+      <h2>Mécanisme de rachat financé par assurance</h2>
+      <p>Voici, étape par étape, comment le capital d'assurance se transforme en rachat d'actions libre d'impôt pour la succession.</p>
+    </div>
+
+    <div class="flow-wrap">
+      <div class="flow-row">
+        <div class="flow-step">
+          <div class="flow-step-num">1</div>
+          <h5>Décès de l'actionnaire</h5>
+          <p>L'assureur verse le capital décès, libre d'impôt, à la compagnie bénéficiaire de la police.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-step-num">2</div>
+          <h5>Crédit au CDC</h5>
+          <p>Le compte de dividende en capital est crédité du capital-décès net du coût de base rajusté de la police.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-step-num">3</div>
+          <h5>Dividende en capital</h5>
+          <p>La compagnie verse un dividende en capital non imposable à la succession de l'actionnaire décédé.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-step-num">4</div>
+          <h5>Rachat des actions</h5>
+          <p>La succession reçoit les fonds, les actions du défunt sont rachetées, et les survivants augmentent leur participation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="def-box">
+      <div class="def-term">Le compte de dividende en capital (CDC), expliqué simplement</div>
+      <p>Le CDC est un compte fiscal théorique (il n'existe pas physiquement à la banque) que toute société privée sous contrôle canadien doit tenir. Lorsqu'une société reçoit une prestation d'assurance vie dont elle est bénéficiaire, la portion qui excède le coût de base rajusté (essentiellement les primes versées) est créditée au CDC. La société peut ensuite verser ce montant aux actionnaires sous forme de <strong>dividende en capital, entièrement libre d'impôt</strong>, plutôt qu'à titre de dividende ordinaire imposable. C'est ce mécanisme qui permet d'éviter le problème de gross-up fiscal décrit à l'enjeu 2.</p>
+    </div>
+
+    <div class="callout">
+      <p>Pour profiter pleinement de ce mécanisme, la structure de propriété des polices (qui est propriétaire, qui est bénéficiaire) doit être établie avec soin et arrimée à la convention d'actionnaires elle-même. C'est un exercice de planification conjoint entre votre conseiller en sécurité financière, votre comptable et votre avocat corporatif.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══════════════ SECTION 6 : SIMULATION ══════════════ -->
+  <section id="simulation">
+    <div class="section-header">
+      <div class="section-eyebrow">Section 06</div>
+      <h2>Simulation de rachat financé par assurance</h2>
+      <p>Exemple concret pour une entreprise détenue par trois actionnaires aux profils différents. Le montant d'assurance de chacun est calibré pour correspondre précisément à la valeur de ses parts.</p>
+    </div>
+
+    <div class="fin-table-wrap">
+      <table class="fin-table">
+        <thead>
+          <tr>
+            <th>Associé</th>
+            <th>Âge</th>
+            <th>Usage du tabac</th>
+            <th>% de participation</th>
+            <th>Valeur des parts</th>
+            <th>Montant d'assurance</th>
+            <th>Mensualité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name-cell">Pierre</td>
+            <td>54</td>
+            <td>Non</td>
+            <td>28,00 %</td>
+            <td>672 000 $</td>
+            <td>680 000 $</td>
+            <td>140,65 $</td>
+          </tr>
+          <tr>
+            <td class="name-cell">Isabelle</td>
+            <td>45</td>
+            <td>Non</td>
+            <td>55,00 %</td>
+            <td>1 320 000 $</td>
+            <td>1 350 000 $</td>
+            <td>73,44 $</td>
+          </tr>
+          <tr>
+            <td class="name-cell">Jean</td>
+            <td>33</td>
+            <td>Oui</td>
+            <td>17,00 %</td>
+            <td>408 000 $</td>
+            <td>410 000 $</td>
+            <td>43,41 $</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td></td>
+            <td></td>
+            <td>100,00 %</td>
+            <td>2 400 000 $</td>
+            <td>2 440 000 $</td>
+            <td>257,50 $</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout orange">
+      <p>Remarquez à quel point la mensualité totale, à peine <strong>257,50 $ par mois</strong> pour les trois actionnaires combinés, est disproportionnée par rapport au risque couvert de 2,4 M$. C'est précisément ce rapport coût-bénéfice qui rend cette structure incontournable pour la plupart des PME à propriétaires multiples. Notez aussi que l'âge et le tabagisme de Jean influencent sa prime individuelle, mais que le montant d'assurance reste arrimé à sa part réelle de l'entreprise, et non à un montant arbitraire.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══════════════ SECTION 7 : STRATEGIE RETRAITE ══════════════ -->
+  <section id="retraite">
+    <div class="section-header">
+      <div class="section-eyebrow">Section 07</div>
+      <h2>Et si aucun actionnaire ne décède avant l'âge de la retraite ?</h2>
+      <p>C'est doublement une bonne nouvelle. On parle alors de stratégie d'assurance retraite : le même contrat qui protège la convention pendant la vie active de l'entreprise devient un outil d'enrichissement personnel.</p>
+    </div>
+
+    <div class="callout green">
+      <p>Lorsque la police choisie est une assurance vie avec participation ou universelle bien capitalisée, les primes versées pendant les années de croissance de l'entreprise accumulent une <strong>valeur de rachat</strong> qui peut, à la retraite, être mobilisée par l'actionnaire de son vivant, en plus de continuer à protéger ses héritiers. Le capital n'est jamais perdu : il sert d'abord à protéger le partenariat, puis à enrichir la retraite.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══════════════ SECTION 8 : CAS D'ETUDE ══════════════ -->
+  <div style="margin: 0 0 48px; border-radius: 16px; overflow: hidden; height: 340px; position: relative;">
+    <img src="https://images.unsplash.com/photo-1758518729058-b158e71c5a9b?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Portrait d'un actionnaire d'entreprise" style="width:100%; height:100%; object-fit:cover; object-position:center 22%;">
+    <div style="position:absolute; inset:0; background:linear-gradient(to right, rgba(0,32,91,0.55) 0%, transparent 60%);"></div>
+    <div style="position:absolute; bottom:32px; left:36px;">
+      <p style="color:rgba(255,255,255,0.7); font-size:12px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">Section 08</p>
+      <p style="color:#FFFFFF; font-size:22px; font-weight:700; line-height:1.2;">Cas d'étude : Daniel, 45 ans</p>
+    </div>
+  </div>
+
+  <section id="cas">
+    <div class="section-header">
+      <div class="section-eyebrow">Section 08</div>
+      <h2>Cas d'étude : Daniel, 45 ans</h2>
+    </div>
+
+    <div class="case-banner">
+      <span class="case-tag">Profil</span>
+      <h3>Daniel, 45 ans, non-fumeur</h3>
+      <p>Daniel veut sécuriser l'avenir financier de ses proches tout en assurant la pérennité de la compagnie dont il est actionnaire. La compagnie a établi une convention d'actionnaires avec un cabinet d'avocats spécialisé en droit des affaires, puis souscrit une assurance vie selon la <strong>méthode croisée</strong> : chaque actionnaire est propriétaire et bénéficiaire des polices souscrites sur la tête des autres actionnaires.</p>
+    </div>
+
+    <div class="def-box">
+      <div class="def-term">Trois façons de structurer la propriété des polices</div>
+      <p><strong>Méthode croisée (criss-cross) :</strong> chaque actionnaire détient une police sur la vie de chacun des autres, en proportion de sa part de rachat. <strong>Détention corporative :</strong> la société elle-même est propriétaire et bénéficiaire de toutes les polices. <strong>Fiducie :</strong> une fiducie distincte détient les polices au nom de l'ensemble des actionnaires. Le choix entre ces structures dépend du nombre d'actionnaires, du traitement fiscal recherché et de la flexibilité souhaitée si la composition de l'actionnariat change. Pour Daniel et ses associés, la méthode croisée a été retenue pour sa simplicité avec un nombre restreint d'actionnaires.</p>
+    </div>
+
+    <p style="color:var(--text-mid); font-size:15px; margin:24px 0;">Daniel verse annuellement ses dividendes, soit <strong>50 000 $</strong>, dans une assurance avec participation. Il a souscrit à l'option éclipse de prime et a donc arrêté les versements à l'âge de 57 ans.</p>
+
+    <div class="def-box">
+      <div class="def-term">L'option éclipse de prime, expliquée simplement</div>
+      <p>Une police avec participation génère des dividendes qui s'accumulent avec le temps. L'option éclipse de prime permet, une fois cette accumulation suffisante, d'utiliser les dividendes futurs de la police pour payer automatiquement les primes à venir, sans nouveaux versements en argent comptant de la part de l'actionnaire. C'est ce qui a permis à Daniel d'arrêter ses versements à 57 ans tout en gardant sa protection pleinement en vigueur.</p>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-num">600 000 $</div>
+        <div class="stat-label">Total des primes versées par Daniel entre 45 et 57 ans</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1 035 946 $</div>
+        <div class="stat-label">Valeur de rachat de la police à 65 ans, à la retraite de Daniel</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:22px; font-weight:700; color:var(--ia-navy); margin:40px 0 20px;">Stratégie d'assurance retraite : le prêt en collatéral</h3>
+
+    <p style="color:var(--text-mid); font-size:15px; margin-bottom:24px;">À 65 ans, Daniel décide de prendre sa retraite. Plutôt que de retirer directement la valeur de rachat de sa police (ce qui déclencherait de l'impôt), il utilise une stratégie courante : emprunter personnellement en utilisant la police comme garantie auprès d'une institution financière.</p>
+
+    <div class="flow-wrap">
+      <div class="flow-row">
+        <div class="flow-step">
+          <div class="flow-step-num">1</div>
+          <h5>Valeur de rachat</h5>
+          <p>1 035 946 $ accumulés dans la police au moment de la retraite, à 65 ans.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-step-num">2</div>
+          <h5>Prêt en collatéral</h5>
+          <p>Daniel emprunte personnellement 90 % de la valeur, soit 932 351 $, auprès d'une banque, avec la police en garantie.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-step-num">3</div>
+          <h5>Revenu net d'impôt</h5>
+          <p>Cet emprunt n'est pas un revenu imposable. Daniel en dispose librement pour ses projets de retraite.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">
+          <div class="flow-step-num">4</div>
+          <h5>Remboursement au décès</h5>
+          <p>Au décès de Daniel, la prestation d'assurance rembourse le prêt et les intérêts accumulés ; le solde va à sa succession.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:22px; font-weight:700; color:var(--ia-navy); margin:40px 0 20px;">Montant net projeté à la succession</h3>
+
+    <div class="fin-table-wrap">
+      <table class="fin-table">
+        <thead>
+          <tr>
+            <th>Âge au décès</th>
+            <th>Prestation de décès</th>
+            <th>Remboursement du prêt (+ intérêts)</th>
+            <th>Montant net à la succession</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name-cell">80 ans</td>
+            <td>2 997 962 $</td>
+            <td>− 932 531 $ + intérêts</td>
+            <td>≈ 2 000 000 $</td>
+          </tr>
+          <tr>
+            <td class="name-cell">85 ans</td>
+            <td>3 407 708 $</td>
+            <td>− 932 531 $ + intérêts</td>
+            <td>≈ 2 400 000 $</td>
+          </tr>
+          <tr>
+            <td class="name-cell">90 ans</td>
+            <td>3 936 196 $</td>
+            <td>− 932 531 $ + intérêts</td>
+            <td>≈ 3 000 000 $</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="principle-box">
+      <p>Pour 600 000 $ versés sur 12 ans, Daniel aura financé la protection de son partenariat d'affaires pendant ses années actives, profité d'un revenu de retraite net d'impôt, <strong>et</strong> laissé un héritage net de l'ordre de 2 à 3 M$ à sa succession. C'est ce qu'on entend par « doublement une bonne nouvelle ».</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══════════════ SECTION 9 : DIAGNOSTIC ══════════════ -->
+  <section id="diagnostic">
+    <div class="section-header">
+      <div class="section-eyebrow">Section 09</div>
+      <h2>Diagnostic rapide : votre convention est-elle finançable ?</h2>
+      <p>Cochez mentalement les énoncés suivants. Si vous répondez « non » ou « je ne sais pas » à l'un d'entre eux, votre convention présente probablement une faille d'exécution qui mérite une révision.</p>
+    </div>
+
+    <div class="check-list">
+      <div class="check-item">
+        <div class="check-box"></div>
+        <p>Ma convention d'actionnaires prévoit une clause de rachat obligatoire en cas de décès. <span>(Si non : commencez par cette étape avec votre avocat corporatif.)</span></p>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <p>Je sais précisément à combien s'élèverait l'obligation de rachat si un associé décédait aujourd'hui. <span>(La valeur des parts évolue ; elle doit être révisée régulièrement.)</span></p>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <p>L'entreprise ou les actionnaires détiennent une assurance vie dont le montant correspond à cette obligation, et non un montant arbitraire choisi il y a plusieurs années.</p>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <p>La structure de propriété des polices (croisée, corporative ou en fiducie) est arrimée à ce qui est écrit dans la convention elle-même.</p>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <p>La question de l'invalidité de longue durée d'un actionnaire est traitée séparément du décès, avec une protection dédiée.</p>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <p>La méthode d'évaluation des parts dans la convention est précise et ne laisse pas de place à l'interprétation en cas de désaccord.</p>
+      </div>
+    </div>
+
+    <div class="callout orange" style="margin-top:32px;">
+      <p><strong>Un point essentiel à retenir :</strong> la valeur d'une entreprise évolue, parfois rapidement. Un montant d'assurance fixé au moment de la signature de la convention peut devenir largement insuffisant cinq ou dix ans plus tard. Une révision périodique, idéalement annuelle, du moteur financier de votre convention est aussi importante que la rédaction initiale du document.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══════════════ SECTION 10 : A PROPOS ══════════════ -->
+  <div style="margin: 0 0 48px; border-radius: 16px; overflow: hidden; height: 340px; position: relative;">
+    <img src="https://images.unsplash.com/photo-1758518730037-a16581a040e8?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Rencontre de planification d'affaires" style="width:100%; height:100%; object-fit:cover; object-position:center 30%;">
+    <div style="position:absolute; inset:0; background:linear-gradient(to right, rgba(0,32,91,0.55) 0%, transparent 60%);"></div>
+    <div style="position:absolute; bottom:32px; left:36px;">
+      <p style="color:rgba(255,255,255,0.7); font-size:12px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">Section 10</p>
+      <p style="color:#FFFFFF; font-size:22px; font-weight:700; line-height:1.2;">Pourquoi travailler avec<br>David Champmartin</p>
+    </div>
+  </div>
+
+  <section id="aide">
+    <div class="about-section">
+      <h2>Ne laissez pas votre convention d'actionnaires être un simple document</h2>
+      <p class="tagline">« J'aide les propriétaires d'entreprise à transformer leurs succès commerciaux en sécurité patrimoniale. »</p>
+      <p class="lead">Vérifiez le moteur financier de votre convention avant qu'un événement imprévu ne révèle ses failles. Une simulation personnalisée prend moins d'une heure et peut vous épargner, à vous et à vos associés, des années de complications.</p>
+
+      <div class="value-props">
+        <div class="value-prop">
+          <div class="vp-icon">🎯</div>
+          <h4>Analyse arrimée à votre convention</h4>
+          <p>Révision de vos clauses existantes avec votre avocat corporatif pour s'assurer que le financement colle exactement aux obligations prévues.</p>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon">📊</div>
+          <h4>Simulation chiffrée personnalisée</h4>
+          <p>Calcul des montants d'assurance requis pour chaque actionnaire selon sa part réelle, comme dans l'exemple de Pierre, Isabelle et Jean.</p>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon">🤝</div>
+          <h4>Collaboration avec vos professionnels</h4>
+          <p>Travail concerté avec votre comptable et votre avocat pour structurer la propriété des polices et optimiser le compte de dividende en capital.</p>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon">📅</div>
+          <h4>Suivi et révision périodique</h4>
+          <p>Mise à jour régulière des montants de couverture à mesure que la valeur de votre entreprise évolue.</p>
+        </div>
+      </div>
+
+      <a href="#" class="cta-btn">Demandez votre simulation sans frais</a>
+
+      <div class="credentials-row">
+        <div class="credential-badge">✓ Certifié par l'Autorité des marchés financiers</div>
+        <div class="credential-badge">🏦 Industrielle Alliance, assurances et placements financiers</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="guide-footer">
+  <div class="footer-brand">Industrielle Alliance, Assurance et services financiers inc.</div>
+  <div class="footer-disc">Ce guide est fourni à titre informatif seulement et ne constitue pas un avis juridique, comptable ou fiscal personnalisé. La rédaction et la révision d'une convention entre actionnaires doivent être effectuées par un avocat corporatif. Les stratégies fiscales mentionnées (compte de dividende en capital, éclipse de prime, prêt en collatéral) doivent être validées avec votre comptable selon votre situation propre. Les chiffres et exemples sont fournis à titre illustratif seulement et ne garantissent aucun résultat futur. Industrielle Alliance est membre de l'ARSF. Tout investissement ou produit d'assurance comporte des risques ; consultez votre conseiller en sécurité financière avant de prendre une décision.</div>
+</footer>
+
+</body>
+</html>
